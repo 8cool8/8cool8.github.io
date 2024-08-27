@@ -1,0 +1,262 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+// 白天颜色
+:root {
+  --primary-color: #FD6585;
+  --theme-bg-color: rgba(248, 250, 252);
+  --theme-bg-color-a8: rgba(248, 250, 252, 0.8);
+  --theme-text-color: #2F2F2F;
+  --comment-color: #f1f2f3;
+  --grey-0: #fff;
+  --grey-1: #fdfdfd;
+  --grey-2: #f7f7f7;
+  --grey-3: #eff2f3;
+  --grey-4: #ccc;
+  --grey-5: #999;
+  --grey-6: #666;
+  --grey-7: #333;
+  --grey-8: #222;
+  --grey-9: #000;
+  --grey-1-a9: rgba(253, 253, 253, 0.9);
+  --grey-1-a7: rgba(253, 253, 253, 0.7);
+  --grey-1-a5: rgba(253, 253, 253, 0.5);
+  --grey-1-a3: rgba(253, 253, 253, 0.3);
+  --grey-1-a0: rgba(253, 253, 253, 0);
+  --grey-9-a5: rgba(0, 0, 0, 0.5);
+  --grey-9-a1: rgba(0, 0, 0, 0.1);
+  --grey-2-a0: rgba(247, 247, 247, 0);
+  --color-pink-light: #ffe6fa;
+  --color-cyan-light: #e3fdf5;
+  --color-red: #e9546b;
+  --color-pink: #ed6ea0;
+  --color-orange: #ec8c69;
+  --color-yellow: #eab700;
+  --color-green: #0a7426;
+  --color-aqua: #3e999f;
+  --color-blue: #49b1f5;
+  --color-purple: #9d5b8b;
+  --color-grey: #869194;
+  --color-red-a1: rgba(233, 84, 107, 0.1);
+  --color-red-a3: rgba(233, 84, 107, 0.3);
+  --color-pink-a3: rgba(237, 110, 160, 0.3);
+  --color-pink-light-a3: rgba(255, 230, 250, 0.3);
+  --color-pink-light-a5: rgba(255, 230, 250, 0.5);
+  --color-pink-light-a7: rgba(255, 230, 250, 0.7);
+  --body-bg-shadow: var(--grey-2);
+  --box-bg-shadow: var(--grey-9-a1);
+  --text-color: var(--grey-7);
+  --header-text-color: var(--grey-0);
+  --nav-bg: linear-gradient(-225deg, var(--color-cyan-light) 0, var(--color-pink-light) 100%);
+  --footer-bg: linear-gradient(-45deg, #ec8c69, #e9546b, #38a1db, #23d5ab);
+  --note-border: #cda0c7;
+  --note-bg: #fdf8ff;
+  --note-text: #8a51c0;
+  --note-hover: #f14668;
+  --comment-btn: #ed9abb;
+}
+
+// 黑夜颜色
+[theme="dark"]:root {
+  --primary-color: #FF8FA3;
+  --theme-bg-color: rgba(47, 47, 47);
+  --theme-bg-color-a8: rgba(47, 47, 47, 0.8);
+  --theme-text-color: #F8FAFC;
+  --comment-color: var(--grey-1);
+  --grey-0: #222;
+  --grey-1: #21252b;
+  --grey-2: #363636;
+  --grey-3: #444;
+  --grey-4: #666;
+  --grey-5: #aaa;
+  --grey-6: #ccc;
+  --grey-7: #ddd;
+  --grey-8: #eee;
+  --grey-9: #f7f7f7;
+  --grey-1-a9: rgba(34, 34, 34, 0.9);
+  --grey-1-a7: rgba(34, 34, 34, 0.7);
+  --grey-1-a5: rgba(34, 34, 34, 0.5);
+  --grey-1-a3: rgba(34, 34, 34, 0.3);
+  --grey-1-a0: rgba(34, 34, 34, 0);
+  --grey-9-a5: rgba(51, 51, 51, 0.5);
+  --grey-9-a1: rgba(51, 51, 51, 0.1);
+  --grey-2-a0: rgba(54, 54, 54, 0);
+  --color-pink-light: #322d31;
+  --color-cyan-light: #2d3230;
+  --color-red: rgba(237, 118, 137, 0.9);
+  --color-pink: rgba(241, 139, 179, 0.8);
+  --color-orange: rgba(240, 163, 135, 0.8);
+  --color-yellow: #ffe175;
+  --color-green: #86c59d;
+  --color-aqua: #97d3d6;
+  --color-blue: #9cd0ed;
+  --color-purple: #cfacc5;
+  --color-grey: #c3c8ca;
+  --body-bg-shadow: #000;
+  --box-bg-shadow: #000;
+  --text-color: var(--grey-5);
+  --header-text-color: var(--grey-9);
+  --note-bg: rgba(48, 49, 50, 0.8);
+  --note-text: rgba(109, 164, 219, 0.8);
+  --note-hover: rgba(168, 49, 72, 0.8);
+
+  img {
+    filter: brightness(0.95);
+  }
+}
+
+html {
+  background-color: var(--theme-bg-color-a8);
+  color: var(--theme-text-color);
+  transition: color 300ms, background-color 300ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; 
+}
+// html[theme='dark-mode'] img, video, .image{
+//   filter: invert(1) hue-rotate(180deg);
+// }
+
+:focus {
+  outline: none;
+}
+
+// 鼠标选中文字样式
+::selection {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+// 设定滚轮
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px #cac8c6;
+  background: #cac8c6;
+}
+::-webkit-scrollbar-track {
+  background: 0 0;
+  border-radius: 1px;
+}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+// 实现鼠标悬浮才显示滚动条
+.scroll-no-bar {
+  overflow-y: auto;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 8px, black 8px);
+  mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 8px, black 8px);
+  -webkit-mask-size: 100% 20000px;
+  mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+
+  &:hover {
+    -webkit-mask-position: left top;
+    mask-position: left top;
+  }
+}
+
+.ps {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.ps .ps__rail-x:hover, .ps .ps__rail-y:hover, .ps .ps__rail-x:focus, .ps .ps__rail-y:focus, .ps .ps__rail-x.ps--clicking, .ps .ps__rail-y.ps--clicking {
+  background-color: transparent !important;
+}
+
+.ps__rail-y:hover > .ps__thumb-y, .ps__rail-y:focus > .ps__thumb-y, .ps__rail-y.ps--clicking .ps__thumb-y {
+  width: 8px !important;
+}
+
+body {
+  cursor: url(/blue.cur), auto;
+  user-select: none;
+}
+
+@font-face {
+  font-family: "DS-DIGI";
+  src: url("./assets/font/DS-DIGI.ttf");
+}
+
+// 禁止图片被拖拽
+img {
+  // pointer-events: none;
+  -webkit-user-drag: none;
+  // user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-width: 100%;
+}
+
+.app-img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+p {
+  margin: 0;
+}
+
+.bf {
+  backdrop-filter: saturate(500%) blur(10px);
+}
+
+.game-dialog {
+  .title-link {
+    display: flex;
+    align-items: center;
+    .link {
+      font-weight: normal;
+      font-size: 14px;
+      margin-left: 16px;
+    }
+    .ant-space {
+      margin-left: 16px;
+      .ant-input-number {
+        width: 66px;
+      }
+    }
+  }
+  .ant-modal-close {
+    top: 7px;
+    right: 12px;
+  }
+  .ant-modal-header {
+    height: 32px;
+    line-height: 32px;
+    padding: 4px 0 0 12px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .ant-modal-content {
+    padding: 0 !important;
+    .ant-modal-body {
+      line-height: 0;
+      background-color: #fff;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      box-shadow: 0 0 20px inset #ddd;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
